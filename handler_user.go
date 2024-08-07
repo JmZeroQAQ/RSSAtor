@@ -39,7 +39,7 @@ func (cfg *apiConfig) handlerUsersCreate(w http.ResponseWriter, r *http.Request)
 func (cfg *apiConfig) handlerUsersGet(w http.ResponseWriter, r *http.Request) {
 	apiKey, err := auth.GetAPIKey(r.Header)
 	if err != nil {
-		respondWithError(w, http.StatusUnauthorized, "Couldn't find api apiKey")
+		respondWithError(w, http.StatusUnauthorized, "Couldn't find apiKey")
 		return
 	}
 
